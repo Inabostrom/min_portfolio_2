@@ -1,5 +1,6 @@
-html {
-    font-size: 18px;
+/* html {
+    font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -10,10 +11,59 @@ header {
     position: fixed;
     min-height: 80px;
     width: 100%;
-    color:#fff;
-    background-color: #000;
+    color:#3B3835;
+    background-color: #fff;
     z-index: 5;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
 
+.main-menu-desktop ul{
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    padding: 0,8rem; 
+}
+
+.main-menu-desktop ul li a{
+    color: #3B3835;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s ease-in-out;
+}
+
+.main-menu-desktop ul li a:hover {
+    border-bottom: 2px solid #f00;
+}
+
+.main-menu-desktop {
+    display: none;
+}
+
+.close-mobile-menu {
+cursor: pointer;
+}
+
+
+.burger-icon {
+    padding: 0.8rem;
+    cursor: pointer;
+    z-index: 2000;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0.4rem;
+}
+
+.burger {
+    background-image: url('../assets/hamburgermenu.png');
+    background-repeat: no-repeat;
+}
+
+.close-mobile-menu {
+    background-image: url('../assets/closemenu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -34,7 +84,7 @@ header {
     padding: 5px;
     background-color: #fff;
     position: absolute;
-    bottom: 200px;
+    top: 200px;
     left: 40px;
     font-size: 44px;
 }
@@ -55,12 +105,53 @@ header nav li{
     width: 100px;
 }
 
-header nav ul li a{
-    color: #fff;
+
+.logo {
+    display: inline;
 }
 
-.burger-icon {
-    display: block;
+.mobile-nav {
+position: absolute;
+width: 100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0,7);
+text-align: center;
+padding: 2rem;
+animation-name: slideIn;
+animation-duration: 0,3s;
+z-index: 10;
+}
+
+.mobile-nav-hide {
+    display: none;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li a {
+color: #fff;
+text-decoration: none;
+font-size: 3rem;
+}
+
+footer {
+    min-height: 40px;
+    padding: 5px;
+    background-color: #000;
+ color: #fff;
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(100vw);
+    }
+
+    to {
+        transform: translate(0px);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -69,16 +160,204 @@ header nav ul li a{
         }
 }
 
-.logo {
-    display: inline;
+
+@media screen and (min-width: 768px) {
+    .main-menu-desktop{
+        display: block;
+    }
+} */
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
 }
 
-header nav {
+body {
+    background-color: var(--background-page);
+}
+
+header {
+    position: fixed;
+    min-height: 80px;
+    width: 100%;
+    color: #3B3835;
+    background-color: #fff;
+    z-index: 5;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.arrow-down {
+    
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+.line-feed {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-information-text {
+    font-size: 25px;
+    padding: 0.8rem;
+    
+
+}
+
+.main-menu-desktop ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    padding: 0.8rem;
+}
+
+
+.main-menu-desktop ul li a {
+    color: #3B3835;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s ease-in-out;
+}
+
+.main-menu-desktop ul li a:hover {
+    border-bottom: 2px solid #E64359;
+    color: #E64359;
+}
+
+.main-menu-desktop {
     display: none;
 }
 
 @media screen and (min-width: 768px) {
-    header nav {
+    .main-menu-desktop {
         display: block;
     }
+}
+
+.close-mobile-menu {
+    cursor: pointer;
+}
+
+.burger-icon {
+    padding: 0.8rem;
+    cursor: pointer;
+    z-index: 2000;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0.4rem;
+}
+
+.burger {
+    background-image: url('../assets/hamburgermenu.png');
+    background-repeat: no-repeat;
+}
+
+.closemobilemenu {
+    background-image: url('../assets/closemenu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px)  {
+    .burger-icon {
+        display: none;
+    }
+}
+
+.logo {
+    padding: 0.8rem;
+}
+
+.mobile-nav {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align:center;
+    padding: 2rem;
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    z-index: 10;
+}
+
+.mobile-nav-hide {
+    display: none;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(100vw);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: burlywood; */
+    padding: 20px;
+    border: 5px solid #333;
+    position: relative;
+    /* background-image: url('../assets/picture.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-width{
+    width: 90%;
+    max-width: 50ch;
+    margin: auto;
+}
+
+.red {
+    color: #E64359;
+}
+
+h2{
+    padding: 0.8rem;
+}
+
+.container p {
+    color: #000;
+    padding: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    font-size: 44px;
+}
+
+.container span {
+    color: #000;
+    padding: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 260px;
+    left: 40px;
+    font-size: 24px;
+}
+
+footer {
+    min-height: 40px;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
 }
