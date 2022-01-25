@@ -196,7 +196,7 @@ header {
 }
 
 .line-feed {
-    display: block;
+   display: block;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -204,9 +204,31 @@ header {
 .contact-information-text {
     font-size: 25px;
     padding: 0.8rem;
-    
-
 }
+
+.link-text-about-me {
+    text-align: right;
+    padding: 0.8rem;
+    color: #235990;
+}
+
+.link-text-about-me a:link {
+    color: #235990;
+}
+
+.link-text-about-me a:visited {
+    color: #1A446D;
+    text-decoration: none;
+}
+
+
+.link-text-about-me a:hover {
+    color: #1A446D;
+    text-decoration: none;
+}
+
+
+
 
 .main-menu-desktop ul {
     display: flex;
