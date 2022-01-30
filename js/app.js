@@ -1,3 +1,7 @@
+import { cdnUrl, projectID } from './env.js';
+import { handleImage } from './utils.js';
+import { handleParagraphs } from './utils.js';
+
 function init() {
     const URL = window.location.href;
     const urlString =window.location.search;
