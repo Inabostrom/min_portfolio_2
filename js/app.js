@@ -1,6 +1,6 @@
 import { cdnUrl, projectID } from './env.js';
-import { handleImage } from './utils.js';
-import { handleParagraphs } from './utils.js';
+import { handleImage, handleParagraphs } from './utils.js';
+
 
 function init() {
     const URL = window.location.href;
@@ -29,11 +29,11 @@ function test () {
     console.log('test');
 }
 
-const cdnUrl = 'https://cdn.sanity.io/images/altl67pm/production/';
+// const cdnUrl = 'https://cdn.sanity.io/images/altl67pm/production/';
 
 async function getPost (pageValue) {
     const project = document.querySelector('.projectside');
-    const post = await fetch(`https://altl67pm.api.sanity.io/v1/data/query/production?query=*
+    const post = await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
     [slug.current == "${pageValue}"]
     `);
     console.log(post);
@@ -48,7 +48,7 @@ async function getPost (pageValue) {
 
 
 async function getPosts() {
-    const posts = await fetch(`https://altl67pm.api.sanity.io/v1/data/query/production?query=*
+    const posts = await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
     [_type == "post"]
     `);
     const { result } = await posts.json();
