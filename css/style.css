@@ -189,6 +189,13 @@ ul li a:hover {
     margin: auto;
 }
 
+.bio-text{
+    width: 90%;
+    max-width: 50ch;
+    margin: auto;
+}
+
+
 .red {
     color: #E64359;
 }
