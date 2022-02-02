@@ -49,19 +49,62 @@ async function getAuthors() {
     `);
     const { result } = await authors.json();
 
-    let aboutMeElement = document.getElementById("about-me");
+    let contactElement = document.getElementById("contact");
     const nameElement = document.createElement('p');
     nameElement.innerText = result[0].name;
-    const bioElement = document.createElement('p');
-    bioElement.classList.add("bio-text")
-    bioElement.innerText = result[0].bio[1].children[0].text;
 
-    aboutMeElement.append(nameElement); 
-    aboutMeElement.append(bioElement);
-    aboutMeElement.append(handleImage(result[0].image.asset._ref, 400));
+    const contactDivElement = document.createElement('div');
+    const phoneElement = document.createElement('p');
+    phoneElement.innerText = result[0].phone;
 
-    console.log("Authors:")
-    console.log(result[0].name);
+    const emailElement = document.createElement('p');
+    emailElement.innerText = result[0].email;
+
+   
+    // const bioElement = document.createElement('div');
+    // bioElement.classList.add("bio-text");
+    // result[0].shortIntro.forEach(bioValue => {
+    //     let pElement = document.createElement("p");
+    //     pElement.innerText = bioValue.children[0].text;
+    //     bioElement.append(pElement);
+    // });
+
+    
+
+
+    let aElement = document.createElement("a");
+    
+    aElement.setAttribute('href', `./aboutme.html?page=${result[0].slug.current}`);
+    // aElement.setAttribute('href', `./om-meg.html?page=${result[0].slug.current}`);
+    // aElement.innerText = "Les mer om meg her";
+    //bioElement.append(aElement);
+    
+    contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
+  
+    contactDivElement.append(nameElement);
+    contactDivElement.append(phoneElement);
+    contactDivElement.append(emailElement); 
+    contactElement.append(contactDivElement); 
+
+    // aboutMeElement.append(bioElement);
+//FERDIG MED CONTACT
+// let linkElement = document.getElementById("link");
+//     const linkElement = document.createElement('link');
+
+let aboutMeElement = document.getElementById("about-me");
+const linkElement = document.createElement('link');
+
+
+    const shortIntroElement = document.createElement('div');
+    shortIntroElement.classList.add("bio-text");
+    result[0].shortIntro.forEach(bioValue => {
+        let pElement = document.createElement("p");
+        pElement.innerText = bioValue.children[0].text;
+        shortIntroElement.append(pElement);
+    });
+
+    aboutMeElement.append(shortIntroElement);
+
     //const { result } = await authors.json();
     // return console.log('async') shift+cmd+7
 
@@ -101,7 +144,7 @@ result.forEach(post => {
         projectBlock.append(projectMask);
 
         const projectCover = document.createElement('img');
-
+        
         const cover = post.mainImage.asset._ref.split('-')
         projectCover.setAttribute('src', `${cdnUrl}${cover[1]}-${cover[2]}.${cover[3]}?h=400`);
         projectCover.classList.add('project-cover');
