@@ -43,6 +43,7 @@ async function getPost (pageValue) {
     project.append(title)
     project.append(handleParagraphs(result[0].body));
 }
+
 async function getAuthors() {
     const authors = await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
     [_type == "author"]
@@ -50,16 +51,21 @@ async function getAuthors() {
     const { result } = await authors.json();
 
     let contactElement = document.getElementById("contact");
+      
+    const contactDivElement = document.createElement('div');
+
     const nameElement = document.createElement('p');
     nameElement.innerText = result[0].name;
 
-    const contactDivElement = document.createElement('div');
     const phoneElement = document.createElement('p');
     phoneElement.innerText = result[0].phone;
 
     const emailElement = document.createElement('p');
     emailElement.innerText = result[0].email;
 
+    contactDivElement.append(nameElement);
+    contactDivElement.append(phoneElement);
+    contactDivElement.append(emailElement); 
    
     // const bioElement = document.createElement('div');
     // bioElement.classList.add("bio-text");
@@ -70,20 +76,16 @@ async function getAuthors() {
     // });
 
     
-
-
-    let aElement = document.createElement("a");
+    // let aElement = document.createElement("a");
     
-    aElement.setAttribute('href', `./aboutme.html?page=${result[0].slug.current}`);
+    // aElement.setAttribute('href', `./aboutme.html?page=${result[0].slug.current}`);
     // aElement.setAttribute('href', `./om-meg.html?page=${result[0].slug.current}`);
     // aElement.innerText = "Les mer om meg her";
     //bioElement.append(aElement);
     
     contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
   
-    contactDivElement.append(nameElement);
-    contactDivElement.append(phoneElement);
-    contactDivElement.append(emailElement); 
+
     contactElement.append(contactDivElement); 
 
     // aboutMeElement.append(bioElement);
@@ -91,8 +93,9 @@ async function getAuthors() {
 // let linkElement = document.getElementById("link");
 //     const linkElement = document.createElement('link');
 
-let aboutMeElement = document.getElementById("about-me");
-const linkElement = document.createElement('link');
+// const linkElement = document.createElement('link');
+    
+    let aboutMeElement = document.getElementById("about-me");
 
 
     const shortIntroElement = document.createElement('div');
@@ -110,6 +113,22 @@ const linkElement = document.createElement('link');
 
     //const projectList = document.querySelector('.projectlist');
 }
+
+
+ let myBioElement = document.getElementById("my-bio");
+
+//  const myBioElement = document.createElement('tekst');
+//  myBioElement.classList.add("bio-text2");
+// result[0].bio.forEach(bioValue => {
+//   let p2Element = document.createElement("p2");
+//   p2Element.innerText = bioValue.children[0].text;
+//  shortIntroElement.append(p2Element);
+// });
+
+// aboutMeElement.append(shortIntroElement);
+
+// contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
+
 
 async function getPosts() {
     const posts = await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
