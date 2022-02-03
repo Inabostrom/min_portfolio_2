@@ -2,7 +2,7 @@
 
 html {
     font-size: 20px;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -39,11 +39,6 @@ main {
     margin-top: 1rem;
 }
 
-/* .contact-information-text {
-    font-size: 25px;
-    padding: 0.8rem;
-} */
-
 .link {
     text-align: right;
     padding: 0.8rem;
@@ -64,13 +59,6 @@ main {
     color: #1A446D;
     text-decoration: none;
 }
-
-/* .link-text-about-me a:hover {
-    color: #1A446D;
-    text-decoration: none;
-} */
-
-
 
 .main-menu-desktop ul {
     display: flex;
@@ -99,12 +87,6 @@ ul li a:hover {
     display: none;
 }
 
-/* @media screen and (min-width: 768px) {
-    .main-menu-desktop {
-        display: block;
-    }
-} */
-
 .close-mobile-menu {
     cursor: pointer;
 }
@@ -128,13 +110,6 @@ ul li a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*
-@media screen and (min-width: 768px)  {
-    .burger-icon {
-        display: none;
-    }
-}
-*/
 
 .logo {
     padding: 0.8rem;
@@ -188,7 +163,6 @@ ul li a:hover {
   
     margin: auto;
     grid-template-columns: 1fr 2fr;
-    /* grid-template-rows: 1fr;  */
     display: grid; 
     align-items: center;
     justify-content: center;
@@ -204,7 +178,6 @@ ul li a:hover {
 }
 
 .bio-text{
-    /* width: 90%; */
     max-width: 50ch;
     margin: auto;
     line-height: 1.3rem;
@@ -222,9 +195,7 @@ ul li a:hover {
 .introduction-about-me{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
     width: 90%;
-    /* height: 40vh; */
     margin-bottom: 4rem;
 
 }
@@ -238,18 +209,6 @@ ul li a:hover {
     justify-self: end;
 }
 
-
-
-/* .om-meg-img{
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .my-bio{
-    width: 90%;
-    margin: auto;
-} */
-
 .red {
     color: #E64359;
 }
@@ -260,29 +219,16 @@ h2{
 .container {
     max-width: 1200px;
     background-color: #fff;
-    /* height: 90vh;
-    max-height: 1024px; */
     display: flex;
 }
 
 .top-container {
-    
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center;
-    justify-content: center;
-
-    display: grid; */
-   /*grid-template-columns: 2fr 5fr;*/
-
-
     flex: 1;
     grid-template-areas: "head1 head2 head3"
                              "head4 head5 head6"
                              "head7 head8 head9";
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
     display: grid; 
 
     }
@@ -324,8 +270,6 @@ h2{
 
 .overview-navbar{
     width: 90%;
-
-    /* align-items: center; */
 display: flex;
 padding: 0.8rem;
 color: #3B3835;
@@ -341,11 +285,6 @@ justify-content: space-between;
 
 #my-bio {
     display: block;
-/* display: grid;
-grid-template-columns: 1fr 1fr;
-width: 90%;
-margin-bottom: 4rem; */
-
 flex: 1;
 grid-template-areas: "head10 head11 head12"
                          "head13 head14 head15"
@@ -355,7 +294,6 @@ grid-template-columns: 2fr 2fr 2fr;
 grid-template-rows: 1fr 1fr 1fr;
 gap: 4rem;
 display: grid; 
-/* margin-left: 2rem; */
 padding: 0.8rem;
 width: 90%;
 
@@ -397,11 +335,10 @@ footer {
     max-width: 80rem;
     width: 90%;
     margin: 2rem auto;
-    /* margin-top: cover; */
   display: flex;
 flex-flow: row wrap; 
 gap: 40px; 
-    /* gap: 10px; */
+    
 }
 
 
@@ -410,15 +347,8 @@ gap: 40px;
 } 
 
 .project {
-    /* display: block; */
-    display: grid;/**/
-   /* grid-template-columns: 1fr; */ 
-    
-
-    /* margin-bottom: 4rem; */
-    /* margin-top: 3rem; */
-
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /**/
+    display: grid;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
     width: 500px;
     position: relative; 
     text-decoration: none;
@@ -426,7 +356,7 @@ gap: 40px;
     overflow: hidden;
 }
 
-.project:nth-child(even) img{   /**/
+.project:nth-child(even) img{  
     order:2;
 }
 

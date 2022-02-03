@@ -27,13 +27,7 @@ export function handleParagraphs(body) {
               newp.innerText = p.children[0].text;
               text.append(newp); 
             }
-            // if (body) {
-            //     body.map(h2 => {
-            //         if(h2._type === 'block') {
-            //           const newp = document.createElement('h2');
-            //           newp.innerText = p.children[0].text;
-            //           text.append(newp); 
-            //         }
+          
             
             if(p._type === 'image') {
                 console.log("type image");
