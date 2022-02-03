@@ -99,11 +99,11 @@ ul li a:hover {
     display: none;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .main-menu-desktop {
         display: block;
     }
-}
+} */
 
 .close-mobile-menu {
     cursor: pointer;
@@ -119,7 +119,7 @@ ul li a:hover {
 }
 
 .burger {
-    background-image: url('../assets/hamburgermenu.png');
+    background-image: url('../assets/menu-hamburger.png');
     background-repeat: no-repeat;
 }
 
@@ -204,13 +204,14 @@ ul li a:hover {
 }
 
 .bio-text{
-    width: 90%;
+    /* width: 90%; */
     max-width: 50ch;
     margin: auto;
+    line-height: 1.3rem;
 }
 
 .border-line{
-    border-top: 2px solid black;
+    border-top: 2px solid #3B3835;
     margin-bottom: 60px;
     margin-top: 60px;
     margin-left: 0.8em;
@@ -321,6 +322,68 @@ h2{
     font-size: 24px;
 }
 
+.overview-navbar{
+    width: 90%;
+
+    /* align-items: center; */
+display: flex;
+padding: 0.8rem;
+color: #3B3835;
+justify-content: space-between;
+
+
+}
+
+.overview-navbar span{
+    color: #E64359;
+     }
+  
+
+#my-bio {
+    display: block;
+/* display: grid;
+grid-template-columns: 1fr 1fr;
+width: 90%;
+margin-bottom: 4rem; */
+
+flex: 1;
+grid-template-areas: "head10 head11 head12"
+                         "head13 head14 head15"
+                         "head16 head17 head18"
+                         "head19 head20 head21";
+grid-template-columns: 2fr 2fr 2fr;
+grid-template-rows: 1fr 1fr 1fr;
+gap: 4rem;
+display: grid; 
+/* margin-left: 2rem; */
+padding: 0.8rem;
+width: 90%;
+
+}
+
+.head10{
+    grid-area: head10; 
+}
+
+.head13{
+    grid-area: head13; 
+} 
+
+.head16{
+    grid-area: head16; 
+} 
+
+.my-bio-text {
+
+margin: auto;
+line-height: 1,3rem;
+}
+
+.projectside{
+    width: 90%;
+    max-width: 50ch;
+}
+
 footer {
     min-height: 40px;
     padding: 5px;
@@ -402,3 +465,34 @@ gap: 40px;
     width: 100%;
     height: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    .main-menu-desktop {
+        display: block;
+    }
+}
+
+/* @media screen and (min-width: 375px) {
+     .contact-information {
+        display: block;
+    } 
+    .contact-information p{
+        font-size: 25px;
+    }
+    .introduction-about-me{
+        display: grid;
+        grid-template-columns: 1fr;
+         
+        width: 90%;
+    }
+    .introduction-about-me h2{
+        display: block;
+    }
+.my-bio-mobil{
+    width: 95%;
+}
+
+} */
+
+
+

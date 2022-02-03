@@ -50,22 +50,45 @@ async function getAuthors() {
     `);
     const { result } = await authors.json();
 
+
+    // legger til kontakt på index.html
     let contactElement = document.getElementById("contact");
+    if(contactElement !== null){
+        const contactDivElement = document.createElement('div');
+
+        const nameElement = document.createElement('p');
+        nameElement.innerText = result[0].name;
+    
+        const phoneElement = document.createElement('p');
+        phoneElement.innerText = result[0].phone;
+    
+        const emailElement = document.createElement('p');
+        emailElement.innerText = result[0].email;
+    
+        contactDivElement.append(nameElement);
+        contactDivElement.append(phoneElement);
+        contactDivElement.append(emailElement); 
+        contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
       
-    const contactDivElement = document.createElement('div');
+    
+        contactElement.append(contactDivElement); 
 
-    const nameElement = document.createElement('p');
-    nameElement.innerText = result[0].name;
+        // legger til tekst om meg på index.html
+        let aboutMeElement = document.getElementById("about-me");
 
-    const phoneElement = document.createElement('p');
-    phoneElement.innerText = result[0].phone;
 
-    const emailElement = document.createElement('p');
-    emailElement.innerText = result[0].email;
+        const shortIntroElement = document.createElement('div');
+        shortIntroElement.classList.add("bio-text");
+        result[0].shortIntro.forEach(bioValue => {
+            let pElement = document.createElement("p");
+            pElement.innerText = bioValue.children[0].text;
+            shortIntroElement.append(pElement);
+        });
+    
+        aboutMeElement.append(shortIntroElement);
+    }  
 
-    contactDivElement.append(nameElement);
-    contactDivElement.append(phoneElement);
-    contactDivElement.append(emailElement); 
+
    
     // const bioElement = document.createElement('div');
     // bioElement.classList.add("bio-text");
@@ -83,10 +106,6 @@ async function getAuthors() {
     // aElement.innerText = "Les mer om meg her";
     //bioElement.append(aElement);
     
-    contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
-  
-
-    contactElement.append(contactDivElement); 
 
     // aboutMeElement.append(bioElement);
 //FERDIG MED CONTACT
@@ -95,18 +114,17 @@ async function getAuthors() {
 
 // const linkElement = document.createElement('link');
     
-    let aboutMeElement = document.getElementById("about-me");
 
-
-    const shortIntroElement = document.createElement('div');
-    shortIntroElement.classList.add("bio-text");
-    result[0].shortIntro.forEach(bioValue => {
-        let pElement = document.createElement("p");
-        pElement.innerText = bioValue.children[0].text;
-        shortIntroElement.append(pElement);
-    });
-
-    aboutMeElement.append(shortIntroElement);
+ // legger til tekst på aboutme.html
+    const myBioElement = document.getElementById("my-bio");
+    if(myBioElement !== null){
+    myBioElement.classList.add("bio-text2");
+    result[0].bio.forEach(bioValue => {
+        let p2Element = document.createElement("p");
+        p2Element.innerText = bioValue.children[0].text;
+          myBioElement.append(p2Element);
+      });
+    }
 
     //const { result } = await authors.json();
     // return console.log('async') shift+cmd+7
@@ -115,7 +133,6 @@ async function getAuthors() {
 }
 
 
- let myBioElement = document.getElementById("my-bio");
 
 //  const myBioElement = document.createElement('tekst');
 //  myBioElement.classList.add("bio-text2");
@@ -137,44 +154,48 @@ async function getPosts() {
     const { result } = await posts.json();
     // return console.log('async') shift+cmd+7
 
+    // legger til prosjektene
     const projectList = document.querySelector('.projectlist');
 
+    if(projectList !== null) {
+        result.forEach(post => {
+            const projectBlock = document.createElement('a');
+            projectBlock.classList.add('project');
+            projectBlock.setAttribute('href', `./project.html?page=${post.slug.current}`);
+    
+    
+            const projectTitle = document.createElement('h2');
+            projectTitle.classList.add('project-title');
+            projectTitle.innerText = post.title
+    
+    
+            let subtitle =  post.subtitle;
+            if(subtitle !== undefined){
+                console.log("this is the subtitle : " + subtitle);
+            }
+    
+    
+            projectBlock.append(projectTitle);
+            const projectMask = document.createElement('div');
+            projectMask.classList.add('project-mask')
+            projectBlock.append(projectMask);
+    
+            const projectCover = document.createElement('img');
+            
+            const cover = post.mainImage.asset._ref.split('-')
+            projectCover.setAttribute('src', `${cdnUrl}${cover[1]}-${cover[2]}.${cover[3]}?h=400`);
+            projectCover.classList.add('project-cover');
+            projectBlock.append(projectCover);
+            projectList.append(projectBlock);
+            console.log(projectBlock);
+    
+        });
+    
+        console.log(result);
+    }
+    }
  
-result.forEach(post => {
-        const projectBlock = document.createElement('a');
-        projectBlock.classList.add('project');
-        projectBlock.setAttribute('href', `./project.html?page=${post.slug.current}`);
 
-
-        const projectTitle = document.createElement('h2');
-        projectTitle.classList.add('project-title');
-        projectTitle.innerText = post.title
-
-
-        let subtitle =  post.subtitle;
-        if(subtitle !== undefined){
-            console.log("this is the subtitle : " + subtitle);
-        }
-
-
-        projectBlock.append(projectTitle);
-        const projectMask = document.createElement('div');
-        projectMask.classList.add('project-mask')
-        projectBlock.append(projectMask);
-
-        const projectCover = document.createElement('img');
-        
-        const cover = post.mainImage.asset._ref.split('-')
-        projectCover.setAttribute('src', `${cdnUrl}${cover[1]}-${cover[2]}.${cover[3]}?h=400`);
-        projectCover.classList.add('project-cover');
-        projectBlock.append(projectCover);
-        projectList.append(projectBlock);
-        console.log(projectBlock);
-
-    });
-
-    console.log(result);
-}
     
 
 init();
