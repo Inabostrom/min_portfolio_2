@@ -54,6 +54,18 @@ async function getAuthors() {
     // legger til kontakt på index.html
     let contactElement = document.getElementById("contact");
     if(contactElement !== null){
+
+        /*<section>
+           <img src="img">
+           <div>
+             <p>name</p>
+             <p>phone</p>
+             <p>email</p>
+           </div>
+         </section>
+        */
+        contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));//Setter inn størrelse for bildet
+
         const contactDivElement = document.createElement('div');
 
         const nameElement = document.createElement('p');
@@ -68,24 +80,21 @@ async function getAuthors() {
         contactDivElement.append(nameElement);
         contactDivElement.append(phoneElement);
         contactDivElement.append(emailElement); 
-        contactElement.append(handleImage(result[0].image.asset._ref, 400, "om-meg-img"));
-      
-    
         contactElement.append(contactDivElement); 
 
-        // legger til tekst om meg på index.html
-        let aboutMeElement = document.getElementById("about-me");
+        // legger til tekst om meg
+        let aboutMeElement = document.getElementById("about-me"); //Henter ut class= about-me fra html, teksten fra Sanity skal ligge i
 
 
-        const shortIntroElement = document.createElement('div');
-        shortIntroElement.classList.add("bio-text");
-        result[0].shortIntro.forEach(bioValue => {
-            let pElement = document.createElement("p");
-            pElement.innerText = bioValue.children[0].text;
-            shortIntroElement.append(pElement);
+        const shortIntroElement = document.createElement('div');//Oppretter et div element
+        shortIntroElement.classList.add("bio-text"); //Legger til teksten fra Sanity
+        result[0].shortIntro.forEach(bioValue => {  //Henter ut data fra Jason, Sanity. Forhver biovalue blir det en 
+            let pElement = document.createElement("p"); //
+            pElement.innerText = bioValue.children[0].text; //Henter ut data fra Jason, Sanity for tekst.
+            shortIntroElement.append(pElement); //Legger data inn i p elementet. 
         });
     
-        aboutMeElement.append(shortIntroElement);
+        aboutMeElement.append(shortIntroElement); //Legger p elementet inn i div shortIntroElement
     }  
 
 //FERDIG MED CONTACT

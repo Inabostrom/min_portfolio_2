@@ -402,27 +402,31 @@ gap: 40px;
     }
 }
 
-/* @media screen and (min-width: 375px) {
-     .contact-information {
-        display: block;
-    } 
+@media only screen and (max-width: 600px) {
+    .contact-information {
+      display: block;
+      padding: 1rem;
+      margin-top: 0.8px;
+    }
     .contact-information p{
         font-size: 25px;
     }
     .introduction-about-me{
-        display: grid;
-        grid-template-columns: 1fr;
-         
-        width: 90%;
-    }
-    .introduction-about-me h2{
         display: block;
+        padding: 1rem;
     }
-.my-bio-mobil{
-    width: 95%;
+    .top-container{
+        display: block;
+        padding: 1rem;   
+    }
+  
+
+  #my-bio {
+      display: block;
+  }
+
 }
 
-} */
 
 
 
