@@ -47,7 +47,24 @@ async function getAuthors() {
     await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
     [_type == "author"]
     `);
+
+
+
+
   const { result } = await authors.json();
+
+  var fileResult;
+  const authorFiles = await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
+  [_type == 'author']
+  {'my_filesURL': my_files.asset->url}
+  `).then(response => response.json())
+  .then(jsondata => {
+    console.log(jsondata);
+    fileResult = jsondata;
+  } );
+
+  //const { fileResult } = await authorFiles.json();
+  //console.log(fileResult);
 
   // legger til kontakt på index.html
   let contactElement = document.getElementById("contact");
@@ -76,9 +93,15 @@ async function getAuthors() {
     const emailElement = document.createElement("p");
     emailElement.innerText = result[0].email;
 
+    const downloadTag = document.createElement("a");
+    downloadTag.setAttribute("href",`${fileResult.result[0].my_filesURL}?dl=`);
+    downloadTag.innerText = "My File";
+
+    emailElement.innerText = result[0].email;
     contactDivElement.append(nameElement);
     contactDivElement.append(phoneElement);
     contactDivElement.append(emailElement);
+    contactDivElement.append(downloadTag);
     contactElement.append(contactDivElement);
     //FERDIG MED contact
 
