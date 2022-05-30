@@ -93,15 +93,12 @@ async function getAuthors() {
     const emailElement = document.createElement("p");
     emailElement.innerText = result[0].email;
 
-    const downloadTag = document.createElement("a");
-    downloadTag.setAttribute("href",`${fileResult.result[0].my_filesURL}?dl=`);
-    downloadTag.innerText = "My File";
+
 
     emailElement.innerText = result[0].email;
     contactDivElement.append(nameElement);
     contactDivElement.append(phoneElement);
     contactDivElement.append(emailElement);
-    contactDivElement.append(downloadTag);
     contactElement.append(contactDivElement);
     //FERDIG MED contact
 

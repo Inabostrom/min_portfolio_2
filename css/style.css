@@ -4,7 +4,10 @@ html {
 
   font-family: "Inter", sans-serif;
 }
-
+body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 /* body {
     /* background-color: var(--background-page); 
    
@@ -366,6 +369,7 @@ footer {
   margin: 2rem auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -376,7 +380,7 @@ footer {
 .project {
   display: grid;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  width: 500px;
+  width: 600px;
   position: relative;
   text-decoration: none;
   overflow: hidden;
@@ -398,7 +402,7 @@ footer {
   top: 0;
   left: 0;
   z-index: 5;
-  transform: translate(-500px);
+  transform: translate(-600px);
   transition: transform 0.3s ease-in-out;
 }
 
