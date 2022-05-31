@@ -13,6 +13,15 @@ body {
    
 }*/
 
+#author-name{
+  font-weight: 600;
+}
+
+#author-title{
+  font-weight: 400;
+}
+
+
 header {
   min-height: 80px;
   max-width: 1200px;
@@ -76,8 +85,10 @@ ul li a {
   /* text-decoration: none; */
   /* border-bottom: 2px solid transparent; */
   transition: border 0.2s ease-in-out;
-  border-bottom: 2px solid #1aaaa1; 
+  border-bottom: 2px solid #41E3BA; 
+  margin: 3px;
   padding: 3px;
+  font-weight: 600;
 }
 
 ul li a:hover {
@@ -85,7 +96,7 @@ ul li a:hover {
     color: #E64359;*/
   /* border-bottom: 2px solid #1AAAA1; */
   
-  border-bottom: 1px solid #1D1D1D; 
+  border-bottom: 2px solid #1D1D1D; 
 }
 
 .border {
@@ -169,8 +180,8 @@ ul li a:hover {
   padding: 20px;
 }
 
-.internal-container-width {
-}
+/* .internal-container-width {
+} */
 
 .contact-information {
   width: 90%;
