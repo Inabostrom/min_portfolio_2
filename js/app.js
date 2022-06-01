@@ -230,23 +230,30 @@ async function getPosts() {
 
   if (projectList !== null) {
     result.forEach((post) => {
-      const projectBlock = document.createElement("a");
-      projectBlock.classList.add("project");
-      projectBlock.setAttribute(
-        "href",
-        `./project.html?page=${post.slug.current}`
-      );
 
+      const projectOuterBlock = document.createElement("div");
+      projectOuterBlock.classList.add("outer-project-element");
+    
       const projectTitle = document.createElement("h2");
       projectTitle.classList.add("project-title");
       projectTitle.innerText = post.title;
 
-      let subtitle = post.subtitle;
-      if (subtitle !== undefined) {
-        console.log("this is the subtitle : " + subtitle);
-      }
+      projectOuterBlock.append(projectTitle);
 
-      projectBlock.append(projectTitle);
+      const projectBlock = document.createElement("a");
+      projectBlock.classList.add("project");
+      
+      projectBlock.setAttribute(
+        "href",
+        `./pages/${post.slug.current}.html`
+      );
+
+      const readMore = document.createElement("b");
+      readMore.classList.add("project-read-more");
+      readMore.innerText = "Les mer";
+
+
+      projectBlock.append(readMore);
       const projectMask = document.createElement("div");
       projectMask.classList.add("project-mask");
       projectBlock.append(projectMask);
@@ -260,8 +267,9 @@ async function getPosts() {
       );
       projectCover.classList.add("project-cover");
       projectBlock.append(projectCover);
-      projectList.append(projectBlock);
-      console.log(projectBlock);
+      projectOuterBlock.append(projectBlock);
+      projectList.append(projectOuterBlock);
+      console.log(projectOuterBlock);
     });
 
     console.log(result);

@@ -4,14 +4,16 @@ html {
 
   font-family: "Inter", sans-serif;
 }
-body {
-  margin-left: 20px;
-  margin-right: 20px;
-}
+
+
 /* body {
     /* background-color: var(--background-page); 
    
 }*/
+
+body {
+  background-color: #F6F3F0;
+}
 
 #author-name{
   font-weight: 600;
@@ -118,6 +120,9 @@ ul li a:hover {
   width: 1.6rem;
   height: 1.6rem;
   margin: 0.4rem;
+  color: #fff;
+  background-color: transparent;
+
 }
 
 .burger {
@@ -140,7 +145,7 @@ ul li a:hover {
   width: 100vw;
   height: 100vh;
   /* max-width: 1440px; */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   padding: 2rem;
   animation-name: slideIn;
@@ -150,15 +155,35 @@ ul li a:hover {
 
 .mobile-nav-hide {
   display: none;
+
+}
+.mobile-nav div {
+  width: 100%;
+  background-color: transparent;
 }
 
 .mobile-nav ul {
+  margin-top: 5rem;
   list-style: none;
+  background-color: transparent;
+
+}
+
+.mobile-nav ul li {
+  margin: 2rem;
 }
 
 .mobile-nav ul li a {
+  background-color: transparent;
+   color: #fff;
+  margin: 4rem;
   text-decoration: none;
   font-size: 3rem;
+}
+.mobile-nav ul li a:hover {
+   color: #fff;
+   border-bottom: 2px solid #fff; 
+
 }
 
 @keyframes slideIn {
@@ -299,7 +324,6 @@ h2 {
 .arrow {
   width: 50px;
   height: 50px;
-  background-color: #e64359;
 }
 
 .navigation-bar-desktop {
@@ -367,7 +391,6 @@ h2 {
 
 footer {
   min-height: 80px;
-  max-width: 1440px;
 
   /* padding: 5px; */
   background-color: #121923;
@@ -432,16 +455,20 @@ footer {
   transition: transform 0.3s ease-in-out;
 }
 
-.project:hover .project-title {
+.project:hover .project-read-more {
   transform: translateY(100px);
 }
 
-.project-title {
+.project-read-more {
   position: absolute;
   top: 0;
-  left: 3rem;
+  left: 40%;
+  font-size: 36px;
+  text-align: center;
   z-index: 10;
-  transform: translateY(300px);
+  background-color: transparent;
+  transform: translateY(350px);
+  color: white;
   /* transform: translateY(240px); */
   transition: transform 0.3s ease-in-out;
 }
