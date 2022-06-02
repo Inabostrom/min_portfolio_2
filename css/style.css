@@ -484,6 +484,7 @@ footer {
   }
 }
 
+
 @media only screen and (max-width: 600px) {
   .contact-information {
     display: block;
@@ -501,8 +502,45 @@ footer {
     display: block;
     padding: 1rem;
   }
-
+  .end-of-container {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .container {
+    height: auto;
+  }
+  .arrow {
+    display: none;
+  }
   #my-bio {
     display: block;
+  }
+
+  .contact-information {
+    line-height: 1rem;
+  }
+  .contact-information img{
+    width: 70vw;
+  }
+
+  .outer-project-element img{
+    width: 70vw;
+
+  }
+  .project {
+    width: 90vw;
+  }
+
+  .project-mask {
+    display: none;
+  }
+
+  .mobile-nav ul li a {
+    font-size: 1.2rem;
+    margin: auto;
+  }
+
+  .navigation-bar-desktop {
+    display: none;
   }
 }

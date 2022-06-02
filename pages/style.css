@@ -424,3 +424,75 @@ justify-content: space-around;
   background-color: #121923;
 }
  
+@media only screen and (max-width: 600px) {
+  .inner-container {
+    display: block;
+  }
+  .outer-container {
+    display: block;
+  }
+  img {
+    max-width: 90vw;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .subheading-container {
+    width: 90vw;
+    height: auto;
+  }
+  .flex-row {
+    display: block;
+    height: auto;
+  }
+  .long-subheading-container {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .insight {
+    height: auto;
+  }
+  .mobile-content-box {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 1rem;
+  }
+
+  .flex-start {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 1rem;
+  }
+  #person-2 {
+    margin-top: -1rem;
+  }
+  #negativitet {
+    margin-top: -1rem;
+
+  }
+  .kontrastkrav-img-kunstpluss {
+    height: auto;
+  }
+
+  .img-text-block-container {
+    height: auto;
+  }
+
+  .img-large-container {
+    height: auto;
+  }
+
+  .img-typografy-container {
+    height: auto;
+  }
+
+  .flex-space-between-center{
+    height: auto;
+  }
+}

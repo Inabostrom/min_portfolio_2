@@ -11,10 +11,30 @@ function init() {
   const burgerIcon = document.querySelector(".burger-icon");
   const mobileNav = document.querySelector(".mobile-nav");
   burgerIcon.addEventListener("click", () => {
+    toggleBurger();
+
+  });
+
+  const mobileNavLink1 = document.querySelector("#mobile-nav-link1");
+  mobileNavLink1.addEventListener("click", () => {
+    toggleBurger();
+  });
+
+  const mobileNavLink2 = document.querySelector("#mobile-nav-link2");
+  mobileNavLink2.addEventListener("click", () => {
+    toggleBurger();
+  });
+
+  const mobileNavLink3 = document.querySelector("#mobile-nav-link3");
+  mobileNavLink3.addEventListener("click", () => {
+    toggleBurger();
+  });
+
+  function toggleBurger() {
     mobileNav.classList.toggle("mobile-nav-hide");
     burgerIcon.classList.toggle("burger");
     burgerIcon.classList.toggle("closemobilemenu");
-  });
+  }
 
   if (pageValue === null) {
     getPosts();
