@@ -385,7 +385,7 @@ justify-content: space-around;
 
 
 .img-large-container{
-    height: 1737px;
+    /* height: 1737px; */
     display: flex;
    justify-content: center;
 }
