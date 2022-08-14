@@ -151,6 +151,10 @@ header{
  
 }
 
+.header-padding{
+  padding-right: 3rem;
+}
+
  .flex-row ul {
    min-width: 250px;
  }
@@ -382,6 +386,15 @@ justify-content: space-around;
 }
 
 
+.flex-space-between-center-no-height-limit{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin: 2rem;
+  }
+
 
 
 .img-large-container{
@@ -397,6 +410,13 @@ justify-content: space-around;
    justify-content: center;
     padding-top: 20px;
     
+}
+
+.img-text-block-container-no-height-limit{ 
+  display: flex;
+ justify-content: center;
+  padding-top: 20px;
+  
 }
 
 .kontrastkrav-img-kunstpluss{
@@ -423,6 +443,18 @@ justify-content: space-around;
   color: #cad1dc; 
   background-color: #121923;
 }
+
+/*Image size´s*/
+#wireframe-login-image{
+  max-height: 250px;
+  min-height: fit-content;
+}
+
+#egg-top-image{
+  max-height: 500px;
+  min-height: fit-content;
+}
+
  
 @media only screen and (max-width: 600px) {
   .inner-container {
