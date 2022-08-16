@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasjonsarkitektur</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+
+<body>
+   
+
+    <header>
+
+        <div class="header-page-container">
+                <div class="header-start header-padding">
+                    <h2><a class="link_h2" href="../index.html">Portefølje</a></h2>
+                </div>
+                <section class="header">
+                    <div class="header-padding">
+                        <h1>Skatteflukt</h1>
+                    </div>
+
+                </section>
+
+
+        </div>
+
+
+
+    </header>
+
+
+    <main>
+        <section class="outer-container">
+            <div class="inner-container img-container center-block">
+                <div class="innre-container">
+                     <div class="img-size">
+                        <img src="./images/skatteflukt_forside.png" id="game-board-main-image" alt="det-haster-for-barna-i-afganistan">
+                    </div> 
+                </div>
+
+            </div>
+        </section>
+        <div class="outer-container">
+            <div class="inner-container end-of-container">
+                <div class="arrow"><a href="#prosess"><img src="./images/arrow.png" alt="arrow"></a></div>
+            </div>
+        </div>
+
+        <section class="outer-container" id="prosess">
+            <div class="inner-container subheading-container">
+                <div class="max-width">
+                    <p>Skatteflukt er en gruppeoppgave som har fokus på design, spill-teori og pedagogikk. Utvikling av et spill for vidergående elever med tema skatteflukt. 
+                        Vi lagde prototypen i Figma med en Qr kode til en nettside med spillet spilleregler og lenker til relaterte faktasider om temaet.</p>
+
+                    <p class="kursiv">Problemstilling: «Som en person i alderen 15 - 19 år ønsker jeg meg en morsom gruppeoppgave som kan lære meg mer om hvordan skatteflukt fungerer og hvilke konsekvenser det har.» </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="outer-container">
+            <div class="inner-container">
+                <div class="flex-row">
+                    <ul>
+                        <li class="bold">Metoder</li>
+                        <li>Analyse</li>
+                        <li><span><a href="#personas">Personas</a></span></li>
+                        <li><span><a href="#brainstorming">Brainstorming</a></span></li>
+                        <li>Trådskisser</li>
+                        <li class="line-height"><span><a href="#brukertesting">Brukertesting av spillet</a></span></li>
+
+                      <li class="bold">Prototype</li>
+                        <li><span><a href="#prototype_i_Figma">Gameplay i Figma</a></span></li>
+                        <li><span><a href="#kunnskapskort">Kunnskapskort</a></span></li>
+                        <li><span><a href="#scenario_kort">Scenario kort</a></span></li>
+                    </ul>
+
+
+
+                    <ul>
+                        <li class="bold">Nettside</li>
+                        <li><span><a href="#lenke_til_nettsiden">Qr-kode på spillebrettet</a></span></li>
+                        <li><span><a href="#responsivt_design">Responsivt design</a></span></li>
+                        <li class="line-height"><span><a href="https://skatteflukt.netlify.app">Nettside i html og
+                                    CSS</a></span></li>
+                        <li class="bold">Designsystem</li>
+                        <li><span><a href="#Typografi">Typografi</a></span></li>
+                        <li><span><a href="#moodboard">Moodboard til fargepalett</a></span></li>
+                        <li><span><a href="#Fargepalett">Fargepalett</a></span></li>
+                        <li><span><a href="#logo_favicon">Logo og favicon</a></span></li>
+                        <li><span><a href="#WCAG 2.0 kontrastkrav">WCAG 2.0 kontrastkrav</a></span></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section class="long-subheading-container">
+            <div class="inner-container">
+                <div class="max-width">
+                    <h3>Prosess</h3>
+                    <p> I prosessen jobbet vi sammen i innsiktsfasen, la fremdriftsplan, lagde skisser og prototype for utforming av spillet i Figma. 
+                        For målgruppen er mobiltelefoner og web en naturlig del av hverdagen, dermed ønsket vi å formilde spillereglene og temaet der. 
+                        Nettsiden består av definisjon på hva skatteflukt er, og lenker til nettsider om teamet. 
+                       Tanken bak er at, å skaffe seg mer kunnskap øker sjansene for å vinne spillet.  </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="insight outer-container" id="person-1">
+            <div class="inner-container flex-end">
+
+
+                <div class="center" id="personas">
+
+                    <figure>
+
+                        <img src="./images/personas1_skatteflukt.png" alt="personas1">
+                        <figcaption class="style-figcaption">FOTO: UNSPLASCH</figcaption>
+                    </figure>
+                </div>
+                <div class="mobile-content-box" id="3_dybde_intervju">
+                    <p class="bold-line-height">Personas</p>
+                    <p class="max-width-personas kursiv">
+
+                        “Skoleflink og tålmodig. Liker å lære nye ting. 
+                        leser mye bøker i fritiden.  Liker ikke dataspill, men spiller gjerne brett-og kortspill. gjerne strategispill som er lærerikt. Favoritten er sjakk. Har vunnet flere sjakk-konkurranser.
+                        
+                        Hun er konkurransedyktig og liker å vinne.”
+                        <span class="kursiv-line-height">Sara, 16år, Vestby Vg skole </span>
+                    </p>
+                </div>
+
+            </div>
+            </div> 
+
+
+
+        </section>-->
+
+
+        
+
+    <section class="insight outer-container" id="person-2">
+        <div class="inner-container-no-flex">
+   
+                            <p class="bold-line-height">Personas</p>
+        <div class="flex-start">
+        <p class="max-width-personas kursiv"> “Pga pandemien tilbrakte han mye tid hjemme det siste året. Stort savn for sosial samvær og fysiske aktiviteter med sine medelever.
+            Spilte en del spill som barn (Monopol,  Ludo, Kinasjakk). De siste årene har han spilt mest dataspill, men under pandemien utviklet han en fornyet interesse for brett- og kortspill. Ble lei av å sitte foran en dataskjerm og savnet sosial interaksjon. 
+
+            Det viktigste for ham når han spiller et spill er at det er underholdende og gøy.Jo flere spillere, jo gøyere. Er sosial og aktiv, liker at ting skjer. Kan lett bli utålmodig.”
+            <span class="kursiv-line-height">Thomas, 17år, elev ved Elvebakken Vg skole</span>
+
+
+        <div class="center">
+            <figure>
+                <img src="./images/personas2_skatteflukt.png" alt="personas2">
+                <figcaption class="style-figcaption">FOTO: UNSPLASCH</figcaption>
+            </figure>
+        </div> 
+      </div>
+                
+
+            </div>
+
+            </div>
+
+            </div>
+
+    </section>
+
+   </div>
+
+</div> 
+
+<section class="insight outer-container" id="person-1">
+    <div class="inner-container flex-end">
+
+
+        <div class="center" id="personas">
+
+            <figure>
+
+                <img src="./images/personas1_skatteflukt.png" alt="personas1">
+                <figcaption class="style-figcaption">FOTO: UNSPLASCH</figcaption>
+            </figure>
+        </div>
+        <div class="mobile-content-box" id="3_dybde_intervju">
+            <!-- <p class="bold-line-height">Personas</p> -->
+            <p class="max-width-personas kursiv">
+
+                “Skoleflink og tålmodig. Liker å lære nye ting. 
+                leser mye bøker i fritiden.  Liker ikke dataspill, men spiller gjerne brett-og kortspill. gjerne strategispill som er lærerikt. Favoritten er sjakk. Har vunnet flere sjakk-konkurranser.
+                
+                Hun er konkurransedyktig og liker å vinne.”
+                <span class="kursiv-line-height">Sara, 16år, elev ved Vestby Vg skole </span>
+            </p>
+        </div>
+
+    </div>
+    </div> 
+
+
+
+</section>
+
+
+
+<div class="outer-container" id="brainstorming">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div class="max-width">
+          
+            <p class="bold">Brainstorming</p>
+          
+            <p>Vi hadde en effektiv og kreativ brainstorming i starten av designprosessen. Det ble raskt lettere å se for seg løsninger når vi tok i bruk større flater som tavle å tegne skisser på.</p>
+
+        </div>
+
+        <div>
+            <img src="./images/kreativ_brainstorming_skatteflukt.png" height="400px" alt="times">
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="outer-container" id="brukertesting">
+    <div class="inner-container flex-space-between-center">
+    <!-- <div class="inner-container flex-space-between-center">
+
+        <div class="max-width">
+          
+            <p class="bold">Brukertesting av spillet</p>
+          
+            
+
+        </div> -->
+
+        <div>
+            <img src="./images/spilldesign_prosess.png" height="500px" alt="times">
+
+        </div>
+
+      
+
+            <div class="max-width">
+              
+                <p class="bold">Brukertesting av spillet</p>
+                <p>Det var gøy teste ut spilldynamikken i spillet, vi spilte flere ganger før vi testet videre.</p>
+              
+            </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="outer-container" id="prototype_i_Figma">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div class="max-width">
+          
+            <p class="bold">Prototype av spillet i Figma</p>
+          
+            <p>Figma var hovedverktøyet vi brukte, der vi inn ulike pages for gameplay, teamet, fremdriftplan, brainstorming, brukerreise og personas, moodboard og design, kort, brukertesting, logo og navn, designsystem og nettside.</p>
+
+        </div>
+
+        <div>
+            <img src="./images/spillebrettfigma_skatteflukt.png" id="game-board-image" alt="times">
+
+        </div>
+    </div>
+
+</div>
+
+<div class="outer-container" id="scenario_kort">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div>
+            <img class="kontrastkrav-img-kunstpluss" src="./images/scenario_kort_skatteflukt.png" 
+                alt="colors">
+
+        </div>
+
+
+<div class="max-width" >
+    <!-- <h3>Designsystem</h3> -->
+    <p class="bold max-width">Scenario kort</p>
+    <p>Rask forflytting ut til øyene for å samle inn skatter er en fordel. Ved terningskast og ved å lande på senariofelt skapes det spenning i spilldynamikken.</p> <p>Senariokort for en spiller som skatteflukter eller stat, og være heldig å skaffe deg fordeler eller ulemper.</P> 
+         </p>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- <div class="outer-container" id="responsivt_design">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div>
+            <img class="kontrastkrav-img-kunstpluss" src="./images/skatteflukt_responsivt design.png" height="500px"
+                alt="colors">
+
+        </div>
+
+
+<div class="max-width" >
+    
+    <p class="bold max-width">Responsivt design</p>
+    <p>Nettsiden er kodet i Html og CSS, med tilpasning for å kunne leses på mobil og desktop.</p>
+
+
+</div>
+
+
+</div>
+
+</div> -->
+
+
+<div class="outer-container" id="kunnskapskort">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div class="max-width">
+            <!-- <h3>Designsystem</h3> -->
+            <p class="bold max-width">Kunnskapskort</p>
+            <p>Kunnskap skal lønne seg er en verdi vi ønsket å viderformidle til vidergående elever. Svarer spilleren rikitg på spørsmålet kan en hente skatten på øya. De som sitter igjen med flest skatter når spillet er ferdig, vinner spillet!  
+            </p>
+            <!-- <p>Kunnskap skal lønne seg er en verdi vi ønsket å viderformidle til vidergående elever. Når de scanner Qr koden, vil en kunne raskt finne lenker til faktasider om skatteflukt. En ide før spillet starter, er å gi hverandre tid å sette seg inn i spillereglene individuelt, og lese seg opp på teamet i forkant. 
+            </p> -->
+
+            
+        </div>
+
+        <div>
+            <img class="kontrastkrav-img-kunstpluss"
+                src="./images/kunnskapskort_skatteflukt.png" alt="colors">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="outer-container" id="responsivt_design">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div>
+            <img class="kontrastkrav-img-kunstpluss" src="./images/koden_lenke_skatteflukt.png" height="500px"
+                alt="colors">
+
+        </div>
+
+
+<div class="max-width" >
+    <!-- <h3>Designsystem</h3> -->
+    <p class="bold max-width">Qr-kode på spillebrettet</p>
+    <p>Vidergående elever skal kunne raskt og lettere skaffe seg lenker til faktasider om skatteflukt, når de scanner Qr-koden. En ide før spillet starter, er å gi hverandre tid å sette seg inn i spillereglene individuelt, og lese seg opp på teamet i forkant.</P> 
+         
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="outer-container" id="kunnskapskort">
+
+    <div class="inner-container flex-space-between-center">
+
+        <div class="max-width">
+            <!-- <h3>Designsystem</h3> -->
+            <p class="bold max-width">Responsivt design</p>
+            <P>Nettsiden er kodet i Html og CSS, med tilpasning for å kunne leses på mobil og desktop.</p>
+            <!-- <p>Kunnskap skal lønne seg er en verdi vi ønsket å viderformidle til vidergående elever. Når de scanner Qr koden, vil en kunne raskt finne lenker til faktasider om skatteflukt. En ide før spillet starter, er å gi hverandre tid å sette seg inn i spillereglene individuelt, og lese seg opp på teamet i forkant. 
+            </p> -->
+
+            
+        </div>
+
+        <div>
+            <img class="kontrastkrav-img-kunstpluss"
+                src="./images/skatteflukt_responsivt design.png" alt="colors">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+        <div class="outer-container" id="Typografi">
+
+            <div class="inner-container flex-space-between-center">
+
+                <div class="max-width">
+                    <h3>Designsystem</h3>
+                    <p class="bold">Typografi</p>
+                </div>
+
+                <div>
+                    <img src="./images/typografi_spilldesign.png" id="game-board-typografi-image"  alt="times">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="outer-container" id="moodboard">
+
+            <div class="inner-container flex-space-between-center">
+
+                <div class="max-width">
+                    
+                    <p class="bold max-width">Moodboard til fargene</p>
+                    <p>Vi hentet fargeinspirasjon fra gamle reklameplakater for air france.</p>
+
+                    
+                </div>
+
+                <div>
+                    <img class="kontrastkrav-img-kunstpluss"
+                        src="./images/inspo_fargepalett_skatteflukt.png" alt="colors">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="outer-container" id="Fargepalett">
+
+            <div class="inner-container flex-space-between-center">
+
+                <div>
+                    <!-- <img class="kontrastkrav-img-kunstpluss" src="./images/fargepalett_spilldesign.png"
+                        alt="colors"> -->
+                        <img src="./images/fargepalett_spilldesign.png"
+                         height="600px" alt="colors">
+
+                </div>
+
+                <div class="max-width">
+                    
+                    <p class="bold max-width">Fargepalett</p>
+                    <!-- <p>Fargene satt vi sammen til et favicon, som går gjengjenbart på spillekortene og spillebrettet.</p> -->
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="outer-container" id="logo_favicon">
+
+            <div class="inner-container flex-space-between-center">
+
+                <div class="max-width">
+                    
+                    <p class="bold max-width">Logo og favicon</p>
+                    <p></p>
+
+                    
+                </div>
+
+                <div>
+                    <img class="kontrastkrav-img-kunstpluss"
+                        src="./images/logo_favicon_skatteflukt.png" alt="colors">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="outer-container" id="WCAG 2.0 kontrastkrav">
+
+            <div class="inner-container flex-space-between-center">
+
+                <div class="max-width">
+                    <!-- <h3>Designsystem</h3> -->
+                    <p class="bold max-width">WCAG 2.0 kontrastkrav</p>
+                    <p>Jobbet med kravene fra uutilsynet for WCAG 2.0 sine krav til kontrastverdi for tekst og bakgrunn.
+                    </p>
+
+                    <p>For å måle kontrast på denne siden har jeg brukt Plugin med Able i Figma. </p>
+                </div>
+
+                <div>
+                    <img id="game-board-wcag-image"
+                        src="./images/wcag_spilldesign.png" alt="colors">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="color-footer-font">
+            <p class="color-footer-font">Ina Bostrøm`s portefølje ©2022</p>
+            <p class="color-footer-font">Nettsiden er kodet i Html, CSS og Javascript med oppsett i CMS, Sanity</p>
+        </footer>
+
+</body>
+
+</html>

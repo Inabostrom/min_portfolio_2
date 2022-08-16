@@ -35,6 +35,13 @@ header {
   justify-content: space-between;
 }
 
+.link_h2 {
+  text-decoration: none;
+
+}
+
+
+
 main {
   max-width: 1200px;
   margin: auto;
