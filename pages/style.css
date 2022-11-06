@@ -474,33 +474,35 @@ font-weight: 300;
 /*Image size´s*/
 #wireframe-login-image{
   max-height: 250px;
-  min-height: fit-content;
+  display: table;
+}
+#wireframe-image2{
+  max-width: 900px;
+  display: table;
 }
 
 #egg-top-image{
   max-height: 500px;
-  min-height: fit-content;
 }
 
 #game-board-image{
   max-height: 400px;
-  min-height: fit-content;
+  display: table;
 }
 #game-board-typografi-image{
   max-height: 280px;
-  min-height: fit-content;
+  display: table;
 }
 
 #game-board-wcag-image {
   height: 296px;
-  min-height: fit-content;
+  display: table;
 
 }
 
 #game-board-main-image {
   max-height: 300px;
-  height: fit-content;
-  min-height: fit-content;
+  display: table;
 
 }
  
