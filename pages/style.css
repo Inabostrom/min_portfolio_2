@@ -513,6 +513,10 @@ font-weight: 300;
   .flex-start {
     display: block;
   }
+
+  #wireframe-image2{
+    max-width: 90vw;
+  }
   .inner-container-no-flex {
     display: block;
   }
